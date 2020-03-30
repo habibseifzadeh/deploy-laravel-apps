@@ -1,0 +1,36 @@
+#!/bin/bash
+
+APP_NAME=/my-app
+SERVER_DIR=/c/Apache24
+SOURCE_DIR=/c/Users/Administrator/source/my-app
+SERVER_APP_DIR=$SERVER_DIR$APP_NAME
+
+#Clear cache
+cd $SOURCE_DIR
+php artisan cache:clear
+php artisan config:clear
+
+#Delete old directories in server
+rm -rf $SERVER_APP_DIR
+
+echo "old directory removed, now copying new files..."
+
+#Copy files from source to server
+cp -r $SOURCE_DIR $SERVER_APP_DIR
+
+#Corret paths in the index file
+sed -i s:/../:/..$APP_NAME/:g $SERVER_APP_DIR/public/index.php
+
+#Set permissions
+chmod -R 777 $SERVER_APP_DIR
+
+echo "almost finished, now copying public folder"
+
+rm -rf  $SERVER_DIR/htdocs
+cp -r $SERVER_APP_DIR/public $SERVER_DIR/htdocs
+rm -rf $SERVER_APP_DIR/public
+
+cd $SERVER_APP_DIR
+php artisan config:cache
+php artisan route:cache
+composer install --optimize-autoloader --no-dev
