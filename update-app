@@ -24,11 +24,13 @@ sed -i s:/../:/..$APP_NAME/:g $SERVER_APP_DIR/public/index.php
 #Set permissions
 chmod -R 777 $SERVER_APP_DIR
 
-echo "almost finished, now copying public folder"
+echo "copying public folder..."
 
 rm -rf  $SERVER_DIR/htdocs
 cp -r $SERVER_APP_DIR/public $SERVER_DIR/htdocs
 rm -rf $SERVER_APP_DIR/public
+
+echo "almost finished, some cleanups..."
 
 cd $SERVER_APP_DIR
 php artisan config:cache
