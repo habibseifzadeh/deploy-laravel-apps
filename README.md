@@ -2,7 +2,7 @@
 
 ## About
 
-While there are numerous powerful continuous integration tools out there such as Jenkins, the following script automatizes some burdensome tasks of Laravel applications deployment. 
+While there are numerous powerful continuous integration tools out there such as Jenkins, the following script automatizes some burdensome tasks of deploying Laravel applications. 
 
 ### Major benefits
 1. As the Laravel programmers know, deploying Laravel applications, they must copy almost all the application's folders to the public folder of web server for security reasons. This makes changes to the index.php file of Laravel applications necessary so that it points to the correct paths. The provided script performs the task whenever the programmer deploys their applications.
