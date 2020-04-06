@@ -20,7 +20,7 @@ To use the script, you must set a couple of variables at the beginning of the sc
 ./update-app
 ```
 
-Since the script has been written in bash, the user has to use shells that support *bash* if they would like to use the script in Windows operating system. I myself use it in Git bash without any problem.
+Since the script has been written in *bash*, the user has to use terminals that support *bash* if they want to utilize it in Windows operating system. I myself use it in *Git bash* without any problem.
 
 ## Contact
 
