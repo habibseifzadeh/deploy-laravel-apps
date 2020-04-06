@@ -14,13 +14,13 @@ While there are numerous powerful continuous integration tools out there such as
 4. As I mentioned, the script is easy to use, and it can be executed with minimum software and hardware requirements.
 
 # How to use
-To use the script, you must set a couple of variables at the beginning of the script once. Then, whenever you would like to to deploy your Laravel application, you should issue the command:
+To use the script, you must set a couple of variables at the beginning of the script once. Then, whenever you would like to deploy your Laravel application, you should issue the command:
 
 ```bash
 ./update-app
 ```
 
-Since the script has been written in bash programming, the user has to use shells that support *bash* if they would like to use the script in Windows operating system. I myself use it in Git bash without any problem.
+Since the script has been written in bash, the user has to use shells that support *bash* if they would like to use the script in Windows operating system. I myself use it in Git bash without any problem.
 
 ## Contact
 
